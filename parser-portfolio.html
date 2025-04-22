@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraping Specialist Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4a6fa5;
+            --secondary-color: #166088;
+            --accent-color: #4fc08d;
+            --light-bg: #f8f9fa;
+            --dark-bg: #343a40;
+            --text-color: #212529;
+            --light-text: #f8f9fa;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                45deg,
+                rgba(255, 255, 255, 0.05),
+                rgba(255, 255, 255, 0.05) 10px,
+                rgba(255, 255, 255, 0) 10px,
+                rgba(255, 255, 255, 0) 20px
+            );
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        section {
+            padding: 3rem 0;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 60px;
+            background-color: var(--accent-color);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .skill-tag {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .skill-tag i {
+            margin-right: 0.5rem;
+        }
+        
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .project-category {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .site-attributes {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .site-attribute {
+            display: inline-flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+        
+        .site-attribute i {
+            margin-right: 0.3rem;
+            font-size: 0.7rem;
+        }
+        
+        .data-section {
+            padding: 1rem;
+            background-color: #f1f1f1;
+        }
+        
+        .data-section-title {
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+        
+        .data-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        
+        .data-image {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .data-image img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+        
+        .data-image-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.2rem;
+            text-align: center;
+        }
+        
+        .project-details {
+            padding: 1.5rem;
+        }
+        
+        .project-title {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+        
+        .project-meta {
+            margin-bottom: 1rem;
+        }
+        
+        .meta-item {
+            display: flex;
+            margin-bottom: 0.5rem;
+        }
+        
+        .meta-title {
+            font-weight: bold;
+            min-width: 120px;
+        }
+        
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .tag {
+            background-color: #e9ecef;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #3da978;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .profile-image {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        footer {
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .social-links a {
+            color: var(--light-text);
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        .methodology-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .methodology-item {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+        
+        .methodology-item h3 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+        
+        .methodology-item h3 i {
+            margin-right: 0.5rem;
+            color: var(--accent-color);
+        }
+        
+        .contact-info {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-info p i {
+            margin-right: 0.5rem;
+            color: var(--accent-color);
+            width: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .projects {
+                grid-template-columns: 1fr;
+            }
+            
+            .methodology-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content container">
+            <h1>John Smith</h1>
+            <p>Web Scraping Specialist | Data Mining Expert | API Integration</p>
+        </div>
+    </header>
+    
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="profile-image">
+                    <img src="/api/placeholder/400/400" alt="Professional photo">
+                </div>
+                <div class="profile-info">
+                    <p>I am an experienced web scraping specialist with over 5 years of expertise in extracting, processing, and analyzing data from various web sources.</p>
+                    <p>I specialize in creating efficient solutions for automated data collection using Python and modern web scraping tools, ensuring high-quality data extraction even from challenging sources.</p>
+                    <p>My projects cover a wide range of industries: from e-commerce and marketing research to health data analysis and sports statistics.</p>
+                    
+                    <div class="skills">
+                        <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-tag"><i class="fas fa-spider"></i> Scrapy</span>
+                        <span class="skill-tag"><i class="fab fa-chrome"></i> Selenium</span>
+                        <span class="skill-tag"><i class="fas fa-code"></i> BeautifulSoup</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> MongoDB</span>
+                        <span class="skill-tag"><i class="fas fa-table"></i> Pandas</span>
+                        <span class="skill-tag"><i class="fas fa-mask"></i> Proxy Management</span>
+                        <span class="skill-tag"><i class="fas fa-cloud"></i> API Integration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects" style="background-color: #f1f5f9;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Project Examples</h2>
+            </div>
+            
+            <div class="projects">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-category">
+                        Health & Nutrition Portals
+                    </div>
+                    <div class="site-attributes">
+                        <span class="site-attribute"><i class="fas fa-file"></i> Static Site</span>
+                        <span class="site-attribute"><i class="fas fa-shield-alt"></i> No Protection</span>
+                        <span class="site-attribute"><i class="fas fa-table"></i> Tabular Data</span>
+                    </div>
+                    <div class="data-section">
+                        <div class="data-section-title">Input Data</div>
+                        <div class="data-images">
+                            <div class="data-image">
+                                <img src="/api/placeholder/300/200" alt="Screenshot of the link list page">
+                                <div class="data-image-label">Links Page</div>
+                            </div>
+                            <div class="data-image">
+                                <img src="/api/placeholder/300/200" alt="Screenshot of a table with data">
+                                <div class="data-image-label">Target Table</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-section">
+                        <div class="data-section-title">Output Data</div>
+                        <div class="data-images">
+                            <div class="data-image">
+                                <img src="/api/placeholder/300/200" alt="CSV file preview">
+                                <div class="data-image-label">CSV Export</div>
+                            </div>
+                            <div class="data-image">
+                                <img src="/api/placeholder/300/200" alt="JSON file preview">
+                                <div class="data-image-label">JSON Export</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3 class="project-title">Health-Diet.ru Data Extraction</h3>
+                        
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <div class="meta-title">Website:</div>
+                                <div class="meta-value">health-diet.ru</div>
+                            </div>
+                        </div>
+                        
+                        <p>Developed a fully automated system for parsing a product catalog with information about calorie content, protein/fat/carbohydrate values, and other nutritional parameters.</p>
+                        
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">BeautifulSoup</span>
+                            <span class="tag">CSV</span>
+                            <span class="tag">JSON</span>
+                            <span class="tag">Requests</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-category">
+                        E-commerce
+                    </div>
+                    <div class="site-attributes">
+                        <span class="site-attribute"><i class="fas fa-code"></i> Dynamic JS</span>
+                        <span class="site-attribute"><i class="fas fa-shield-alt"></i> Rate Limiting</span>
+                        <span class="site-attribute"><i class="fas fa-cloud"></i> API Available</span>
+                    </div>
+                    <div class="data-section">
+                        <div class="data-section-title">Input Data</div>
+                        <div class="data-images">
+                            <div class="data-image">
+                                <img src="/api/placeholder/300/200" alt="Screenshot of search results page">
+                                <div class="data-image-label">Category List</div>
+                            </div>
+                            <div class="data-image">
+                                <img src="/api/placeholder/300/200" alt="Screenshot of product page">
+                                <div class="data-image-label">Product Details</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-section">
+                        <div class="data-section-title">Output Data</div>
+                        <div class="data-images">
+                            <div class="data-image">
+                                <img src="/api/placeholder/300/200" alt="MongoDB collection preview">
+                                <div class="data-image-label">MongoDB</div>
+                            </div>
+                            <div class="data-image">
+                                <img src="/api/placeholder/300/200" alt="Excel report preview">
+                                <div class="data-image-label">Excel Report</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3 class="project-title">Marketplace Price Monitoring</h3>
+                        
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <div class="meta-title">Website:</div>
+                                <div class="meta-value">wildberries.ru</div>
+                            </div>
+                        </div>
+                        
+                        <p>Created a competitor price monitoring system on a popular marketplace with daily data updates and price change analytics.</p>
+                        
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Selenium</span>
+                            <span class="tag">API</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Excel</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-category">
+                        Real Estate
+                    </div>
+                    <div class="site-attributes">
+                        <span class="site-attribute"><i class="fas fa-code"></i> Dynamic SPA</span>
+                        <span class="site-attribute"><i class="fas fa-shield-alt"></i> Bot Protection</span>
+                        <span class="site-attribute"><i class="fas fa-mask"></i> Proxy Required</span>
+                    </div>
+                    <div class="data-section">
+                        <div class="data-section-title">Input Data</div>
+                        <div class="data-images">
+                            <div class="data-image">
+                                <img src="/api/placeholder/300/200" alt="Screenshot of search results page">
+                                <div class="data-image-label">Search Results</div>
+                            </div>
+                            <div class="data-image">
+                                <img src="/api/placeholder/300/200" alt="Screenshot of property card">
+                                <div class="data-image-label">Property Card</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-section">
+                        <div class="data-section-title">Output Data</div>
+                        <div class="data-images">
+                            <div class="data-image">
+                                <img src="/api/placeholder/300/200" alt="PostgreSQL database">
+                                <div class="data-image-label">PostgreSQL</div>
+                            </div>
+                            <div class="data-image">
+                                <img src="/api/placeholder/300/200" alt="API endpoint preview">
+                                <div class="data-image-label">REST API</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3 class="project-title">Real Estate Market Data Collection</h3>
+                        
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <div class="meta-title">Website:</div>
+                                <div class="meta-value">cian.ru</div>
+                            </div>
+                        </div>
+                        
+                        <p>Implemented a comprehensive solution for collecting and analyzing real estate market data with the ability to filter by various parameters.</p>
+                        
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Scrapy</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Proxy Rotation</span>
+                            <span class="tag">API</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-category">
+                        News Portals
+                    </div>
+                    <div class="site-attributes">
+                        <span class="site-attribute"><i class="fas fa-sync"></i> Dynamic Content</span>
+                        <span class="site-attribute"><i class="fas fa-rss"></i> RSS Available</span>
+                        <span class="site-attribute"><i class="fas fa-newspaper"></i> Article Extraction</span>
+                    </div>
+                    <div class="data-section">
+                        <div class="data-section-title">Input Data</div>
+                        <div class="data-images">
+                            <div class="data-image">
+                                <img src="/api/placeholder/300/200" alt="Screenshot of news homepage">
+                                <div class="data-image-label">News Homepage</div>
+                            </div>
+                            <div class="data-image">
+                                <img src="/api/placeholder/300/200" alt="Screenshot of article page">
+                                <div class="data-image-label">Article Page</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-section">
+                        <div class="data-section-title">Output Data</div>
+                        <div class="data-images">
+                            <div class="data-image">
+                                <img src="/api/placeholder/300/200" alt="Elasticsearch index">
+                                <div class="data-image-label">Elasticsearch</div>
+                            </div>
+                            <div class="data-image">
+                                <img src="/api/placeholder/300/200" alt="JSON API response">
+                                <div class="data-image-label">JSON API</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3 class="project-title">News Aggregator</h3>
+                        
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <div class="meta-title">Website:</div>
+                                <div class="meta-value">rbc.ru, vedomosti.ru</div>
+                            </div>
+                        </div>
+                        
+                        <p>Created a news monitoring and aggregation system with sentiment analysis and thematic classification capabilities.</p>
+                        
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Newspaper3k</span>
+                            <span class="tag">RSS</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">Elasticsearch</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-category">
+                        Social Networks
+                    </div>
+                    <div class="site-attributes">
+                        <span class="site-attribute"><i class="fas fa-cloud"></i> API Available</span>
+                        <span class="site-attribute"><i class="fas fa-shield-alt"></i> Auth Required</span>
+                        <span class="site-attribute"><i class="fas fa-hourglass"></i> Rate Limited</span>
+                    </div>
+                    <div class="data-section">
+                        <div class="data-section-title">Input Data</div>
+                        <div class="data-images">
+                            <div class="data-image">
+                                <img src="/api/placeholder/300/200" alt="Screenshot of community page">
+                                <div class="data-image-label">Community Page</div>
+                            </div>
+                            <div class="data-image">
+                                <img src="/api/placeholder/300/200" alt="Screenshot of API response">
+                                <div class="data-image-label">API Response</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-section">
+                        <div class="data-section-title">Output Data</div>
+                        <div class="data-images">
+                            <div class="data-image">
+                                <img src="/api/placeholder/300/200" alt="MongoDB collection">
+                                <div class="data-image-label">MongoDB</div>
+                            </div>
+                            <div class="data-image">
+                                <img src="/api/placeholder/300/200" alt="Dashboard visualization">
+                                <div class="data-image-label">Dashboard</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3 class="project-title">Social Network Content Analysis</h3>
+                        
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <div class="meta-title">Website:</div>
+                                <div class="meta-value">vk.com</div>
+                            </div>
+                        </div>
+                        
+                        <p>Developed a tool for analyzing content in social network communities with visualization of user activity and audience engagement metrics.</p>
+                        
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">API</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Matplotlib</span>
+                            <span class="tag">Dashboard</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-category">
+                        Sports Statistics
+                    </div>
+                    <div class="site-attributes">
+                        <span class="site-attribute"><i class="fas fa-table"></i> Tabular Data</span>
+                        <span class="site-attribute"><i class="fas fa-clock"></i> Real-time Updates</span>
+                        <span class="site-attribute"><i class="fas fa-shield-alt"></i> Basic Protection</span>
+                    </div>
+                    <div class="data-section">
+                        <div class="data-section-title">Input Data</div>
+                        <div class="data-images">
+                            <div class="data-image">
+                                <img src="/api/placeholder/300/200" alt="Screenshot of league standings">
+                                <div class="data-image-label">League Standings</div>
+                            </div>
+                            <div class="data-image">
+                                <img src="/api/placeholder/300/200" alt="Screenshot of match statistics">
+                                <div class="data-image-label">Match Statistics</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-section">
+                        <div class="data-section-title">Output Data</div>
+                        <div class="data-images">
+                            <div class="data-image">
+                                <img src="/api/placeholder/300/200" alt="SQL database">
+                                <div class="data-image-label">SQL Database</div>
+                            </div>
+                            <div class="data-image">
+                                <img src="/api/placeholder/300/200" alt="JSON API">
+                                <div class="data-image-label">JSON API</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3 class="project-title">Sports Statistics Aggregation</h3>
+                        
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <div class="meta-title">Website:</div>
+                                <div class="meta-value">sports.ru, championat.com</div>
+                            </div>
+                        </div>
+                        
+                        <p>Created a system for collecting and processing sports statistics for analysis and prediction of match results with automated data updates.</p>
+                        
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">JSON</span>
+                            <span class="tag">FastAPI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="methodology">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Approach</h2>
+            </div>
+            
+            <div class="methodology-content">
+                <div class="methodology-item">
+                    <h3><i class="fas fa-search"></i> Source Analysis</h3>
+                    <p>I carefully study the website structure, identify potential scraping blocks and protections, and determine the optimal method for data extraction.</p>
+                </div>
+                
+                <div class="methodology-item">
+                    <h3><i class="fas fa-code"></i> Solution Development</h3>
+                    <p>I create efficient and reliable scrapers that take into account the specifics of the data source and output requirements.</p>
+                </div>
+                
+                <div class="methodology-item">
+                    <h3><i class="fas fa-shield-alt"></i> Ethical Approach</h3>
+                    <p>I follow robots.txt rules, use reasonable request rate limiting, and do not violate website terms of service.</p>
+                </div>
+                
+                <div class="methodology-item">
+                    <h3><i class="fas fa-chart-line"></i> Processing & Analysis</h3>
+                    <p>I provide data in convenient formats, perform initial analysis and cleaning to ensure high quality results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" style="background-color: #f1f5f9;">
+        <div class="container">
+            <div class="section-title">
