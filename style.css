@@ -6,3 +6,10 @@ body {
             padding: 0;
             background-color: #f8f9fa;
         }
+
+header {
+            background: linear-gradient(135deg, #1a2a57, #263b80);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
