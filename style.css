@@ -19,3 +19,9 @@ header {
             margin: 0 auto;
             padding: 0 20px;
         }
+
+.header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
