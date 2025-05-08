@@ -7,6 +7,11 @@ body {
             background-color: #f8f9fa;
         }
 
+h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
 header {
             background: linear-gradient(135deg, #1a2a57, #263b80);
             color: white;
@@ -14,27 +19,16 @@ header {
             text-align: center;
         }
 
-h1 {
-            margin: 0;
-            font-size: 2.5rem;
+.about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
         }
 
 .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
-        }
-
-.header-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-.tagline {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin: 10px 0 20px;
         }
 
 .contact-info {
@@ -59,4 +53,16 @@ h1 {
         
 .contact-item i {
             margin-right: 8px;
+        }
+
+.header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+.tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin: 10px 0 20px;
         }
