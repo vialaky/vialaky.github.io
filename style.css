@@ -19,6 +19,14 @@ header {
             text-align: center;
         }
 
+section {
+            padding: 60px 0;
+        }
+        
+section:nth-child(even) {
+            background-color: white;
+        }
+
 .about-content {
             max-width: 800px;
             margin: 0 auto;
