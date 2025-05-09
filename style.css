@@ -19,6 +19,22 @@ footer {
             margin: 0 auto;
         }
 
+ .footer-link {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        
+.footer-link:hover {
+            opacity: 0.8;
+        }
+        
+.footer-link i {
+            margin-right: 8px;
+        }
+
 .footer-links {
             display: flex;
             justify-content: center;
