@@ -152,6 +152,15 @@ section:nth-child(even) {
             font-weight: 500;
         }
 
+.project-content {
+            padding: 20px;
+        }
+        
+.project-title {
+            margin-top: 0;
+            color: #1a2a57;
+        }
+
 .skills-container {
             display: flex;
             flex-wrap: wrap;
