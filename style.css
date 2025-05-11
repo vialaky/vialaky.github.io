@@ -13,8 +13,10 @@ body {
             font-size: 0.9rem;
         }
 
-.data-section {
-            margin-top: 20px;
+.data-card {
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            padding: 15px;
         }
 
 .data-container {
@@ -23,10 +25,21 @@ body {
             gap: 15px;
         }
 
-.data-card {
-            background-color: #f8f9fa;
-            border-radius: 6px;
-            padding: 15px;
+.data-section {
+            margin-top: 20px;
+        }
+
+.data-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #1a2a57;
+            display: flex;
+            align-items: center;
+        }
+        
+.data-title i {
+            margin-right: 8px;
+            color: #263b80;
         }
         
 footer {
