@@ -12,6 +12,10 @@ body {
             font-size: 0.9rem;
         }
 
+.data-section {
+            margin-top: 20px;
+        }
+
 footer {
             background: linear-gradient(135deg, #1a2a57, #263b80);
             color: white;
