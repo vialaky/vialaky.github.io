@@ -226,3 +226,18 @@ section:nth-child(even) {
             opacity: 0.9;
             margin: 10px 0 20px;
         }
+
+@media (max-width: 768px) {
+            .projects {
+                grid-template-columns: 1fr;
+            }
+            
+            .data-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
