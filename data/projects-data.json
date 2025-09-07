@@ -36,7 +36,7 @@
   {
     "category": "Soccer Database",
     "title": "Soccerwiki.org",
-    "description": "Web scraping solution to collect structured data on every football team in the English Premier League.",
+    "description": "Web scraping solution to collect structured data for each of the 20 football teams in the English Premier League.",
     "tools": "<i>BeautifulSoup.</i>",
     "inputData": [
       {
