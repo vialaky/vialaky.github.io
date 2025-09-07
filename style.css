@@ -157,7 +157,7 @@ section:nth-child(even) {
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 колонки для 3, 6, 9, 12 карточек */
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-top: 40px;
 }
@@ -202,7 +202,7 @@ section:nth-child(even) {
   transition: transform 0.3s;
   cursor: pointer;
   aspect-ratio: 4/3;
-  object-fit: cover; /* Улучшает отображение изображений */
+  object-fit: cover;
 }
 
 .screenshot:hover {
@@ -232,13 +232,56 @@ section:nth-child(even) {
   margin: 10px 0 20px;
 }
 
+/* Стили для модального окна */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Полупрозрачный фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90vh;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 90vh;
+  display: block;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  color: #1a2a57;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.modal-close:hover {
+  color: #263b80;
+}
+
 @media (max-width: 768px) {
   .projects {
-    grid-template-columns: 1fr; /* 1 колонка на мобильных */
+    grid-template-columns: 1fr;
   }
 
   .data-container {
-    grid-template-columns: 1fr; /* 1 колонка для Input/Output на мобильных */
+    grid-template-columns: 1fr;
   }
 
   .contact-info {
@@ -249,6 +292,6 @@ section:nth-child(even) {
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .projects {
-    grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшетах */
+    grid-template-columns: repeat(2, 1fr);
   }
 }

@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         <div class="data-title">
           <i class="${data.icon}"></i> ${data.title}
         </div>
-        <img src="${data.imgSrc}" alt="${data.alt}" class="screenshot">
+        <img src="${data.imgSrc}" alt="${data.alt}" class="screenshot" data-fullsize="${data.imgSrc}">
       </div>
     `).join('');
 
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         <div class="data-title">
           <i class="${data.icon}"></i> ${data.title}
         </div>
-        <img src="${data.imgSrc}" alt="${data.alt}" class="screenshot">
+        <img src="${data.imgSrc}" alt="${data.alt}" class="screenshot" data-fullsize="${data.imgSrc}">
       </div>
     `).join('');
 
@@ -53,8 +53,31 @@ document.addEventListener('DOMContentLoaded', async () => {
     `;
   }
 
+  // Функция для создания и показа модального окна
+  function showModal(imageSrc, altText) {
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.innerHTML = `
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <img src="${imageSrc}" alt="${altText}" class="modal-image">
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    // Закрытие модального окна
+    const closeModal = () => {
+      modal.remove();
+    };
+
+    modal.querySelector('.modal-close').addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+  }
+
   try {
-    // Загрузка JSON из корня репозитория
+    // Загрузка JSON
     const response = await fetch('data/projects-data.json');
     if (!response.ok) throw new Error('Failed to load projects data');
     const projectsData = await response.json();
@@ -66,6 +89,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Генерируем и вставляем HTML
     const projectsHTML = selectedProjects.map(generateProjectCard).join('');
     projectsContainer.innerHTML = projectsHTML;
+
+    // Добавляем обработчик кликов для скриншотов
+    projectsContainer.addEventListener('click', (e) => {
+      if (e.target.classList.contains('screenshot')) {
+        const imageSrc = e.target.dataset.fullsize;
+        const altText = e.target.alt;
+        showModal(imageSrc, altText);
+      }
+    });
   } catch (error) {
     console.error(error);
     projectsContainer.innerHTML = '<p>Error loading projects. Please try refreshing the page.</p>';
