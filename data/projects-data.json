@@ -14,7 +14,7 @@
       {
         "title": "Data Page",
         "icon": "fas fa-table",
-        "imgSrc": "images/health-diet/img_health-diet.ru_in_datapage.png",
+        "imgSrc": "data/images/health-diet/img_health-diet.ru_in_datapage.png",
         "alt": "Data Page Screenshot"
       }
     ],
@@ -22,13 +22,13 @@
       {
         "title": "CSV",
         "icon": "fas fa-file-csv",
-        "imgSrc": "images/health-diet/img_health-diet.ru_out_csv.png",
+        "imgSrc": "data/images/health-diet/img_health-diet.ru_out_csv.png",
         "alt": "CSV Output Screenshot"
       },
       {
         "title": "JSON",
         "icon": "fas fa-file-code",
-        "imgSrc": "images/health-diet/img_health-diet.ru_out_json.png",
+        "imgSrc": "data/images/health-diet/img_health-diet.ru_out_json.png",
         "alt": "JSON Output Screenshot"
       }
     ]
@@ -42,13 +42,13 @@
       {
         "title": "League Page",
         "icon": "fas fa-link",
-        "imgSrc": "images/soccerwiki/img_soccerwiki.org_in_linkspage.png",
+        "imgSrc": "data/images/soccerwiki/img_soccerwiki.org_in_linkspage.png",
         "alt": "League Page Screenshot"
       },
       {
         "title": "Team Page",
         "icon": "fas fa-tag",
-        "imgSrc": "images/soccerwiki/img_soccerwiki.org_in_datapage.png",
+        "imgSrc": "data/images/soccerwiki/img_soccerwiki.org_in_datapage.png",
         "alt": "Team Page Screenshot"
       }
     ],
@@ -56,13 +56,13 @@
       {
         "title": "JSON",
         "icon": "fas fa-file-code",
-        "imgSrc": "images/soccerwiki/img_soccerwiki.org_out_json.png",
+        "imgSrc": "data/images/soccerwiki/img_soccerwiki.org_out_json.png",
         "alt": "JSON Output Screenshot"
       },
       {
         "title": "JSON",
         "icon": "fas fa-file-code",
-        "imgSrc": "images/soccerwiki/img_soccerwiki.org_out_json2.png",
+        "imgSrc": "data/images/soccerwiki/img_soccerwiki.org_out_json2.png",
         "alt": "JSON Output Screenshot"
       }
     ]
@@ -76,13 +76,13 @@
       {
         "title": "Movies List Page",
         "icon": "fas fa-link",
-        "imgSrc": "images/subslikescript/img_subslikescript.com_in_links.png",
+        "imgSrc": "data/images/subslikescript/img_subslikescript.com_in_links.png",
         "alt": "Links Page Screenshot"
       },
       {
         "title": "Transcription",
         "icon": "fas fa-home",
-        "imgSrc": "images/subslikescript/img_subslikescript.com_in_page.png",
+        "imgSrc": "data/images/subslikescript/img_subslikescript.com_in_page.png",
         "alt": "Data Page Screenshot"
       }
     ],
@@ -90,13 +90,13 @@
       {
         "title": "CSV",
         "icon": "fas fa-file-csv",
-        "imgSrc": "images/subslikescript/img_subslikescript.com_out_json.png",
+        "imgSrc": "data/images/subslikescript/img_subslikescript.com_out_json.png",
         "alt": "JSON Output Screenshot"
       },
       {
         "title": "JSON",
         "icon": "fas fa-file-code",
-        "imgSrc": "images/subslikescript/img_subslikescript.com_out_txt.png",
+        "imgSrc": "data/images/subslikescript/img_subslikescript.com_out_txt.png",
         "alt": "TXT Output Screenshot"
       }
     ]
