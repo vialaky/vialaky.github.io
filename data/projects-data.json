@@ -3,7 +3,7 @@
     "category": "Health & Nutrition Websites",
     "title": "Health-diet.ru",
     "description": "Extract data from a healthy eating website with detailed nutritional information for over 13,000 food items.",
-    "tools": "<i>BeautifulSoup, Pandas.</i>",
+    "tools": "<i>BeautifulSoup, Pandas</i>",
     "inputData": [
       {
         "title": "Links Page",
@@ -37,7 +37,7 @@
     "category": "Soccer Database",
     "title": "Soccerwiki.org",
     "description": "Web scraping solution to collect structured data for each of the 20 football teams in the English Premier League.",
-    "tools": "<i>BeautifulSoup.</i>",
+    "tools": "<i>BeautifulSoup</i>",
     "inputData": [
       {
         "title": "League Page",
@@ -71,7 +71,7 @@
     "category": "Movies Database",
     "title": "Subslikescript.com",
     "description": "A solution for extracting and storing movie titles, plot summaries and scripts from a movie database.",
-    "tools": "<i>BeautifulSoup.</i>",
+    "tools": "<i>BeautifulSoup</i>",
     "inputData": [
       {
         "title": "Movies List Page",
