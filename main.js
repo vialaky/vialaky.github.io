@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   try {
     // Загрузка JSON из корня репозитория
-    const response = await fetch('projects-data.json');
+    const response = await fetch('data/projects-data.json');
     if (!response.ok) throw new Error('Failed to load projects data');
     const projectsData = await response.json();
 
