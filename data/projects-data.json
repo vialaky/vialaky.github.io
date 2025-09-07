@@ -1,0 +1,104 @@
+[
+  {
+    "category": "Health & Nutrition Websites",
+    "title": "Health-diet.ru",
+    "description": "Extract data from a healthy eating website with detailed nutritional information for over 13,000 food items.",
+    "tools": "<i>BeautifulSoup, Pandas.</i>",
+    "inputData": [
+      {
+        "title": "Links Page",
+        "icon": "fas fa-link",
+        "imgSrc": "images/health-diet/img_health-diet.ru_in_linkspage.png",
+        "alt": "Links Page Screenshot"
+      },
+      {
+        "title": "Data Page",
+        "icon": "fas fa-table",
+        "imgSrc": "images/health-diet/img_health-diet.ru_in_datapage.png",
+        "alt": "Data Page Screenshot"
+      }
+    ],
+    "outputData": [
+      {
+        "title": "CSV",
+        "icon": "fas fa-file-csv",
+        "imgSrc": "images/health-diet/img_health-diet.ru_out_csv.png",
+        "alt": "CSV Output Screenshot"
+      },
+      {
+        "title": "JSON",
+        "icon": "fas fa-file-code",
+        "imgSrc": "images/health-diet/img_health-diet.ru_out_json.png",
+        "alt": "JSON Output Screenshot"
+      }
+    ]
+  },
+  {
+    "category": "Soccer Database",
+    "title": "Soccerwiki.org",
+    "description": "Web scraping solution to collect structured data on every football team in the English Premier League.",
+    "tools": "<i>BeautifulSoup.</i>",
+    "inputData": [
+      {
+        "title": "League Page",
+        "icon": "fas fa-link",
+        "imgSrc": "images/soccerwiki/img_soccerwiki.org_in_linkspage.png",
+        "alt": "League Page Screenshot"
+      },
+      {
+        "title": "Team Page",
+        "icon": "fas fa-tag",
+        "imgSrc": "images/soccerwiki/img_soccerwiki.org_in_datapage.png",
+        "alt": "Team Page Screenshot"
+      }
+    ],
+    "outputData": [
+      {
+        "title": "JSON",
+        "icon": "fas fa-file-code",
+        "imgSrc": "images/soccerwiki/img_soccerwiki.org_out_json.png",
+        "alt": "JSON Output Screenshot"
+      },
+      {
+        "title": "JSON",
+        "icon": "fas fa-file-code",
+        "imgSrc": "images/soccerwiki/img_soccerwiki.org_out_json2.png",
+        "alt": "JSON Output Screenshot"
+      }
+    ]
+  },
+  {
+    "category": "Movies Database",
+    "title": "Subslikescript.com",
+    "description": "A solution for extracting and storing movie titles, plot summaries and scripts from a movie database.",
+    "tools": "<i>BeautifulSoup.</i>",
+    "inputData": [
+      {
+        "title": "Movies List Page",
+        "icon": "fas fa-link",
+        "imgSrc": "images/subslikescript/img_subslikescript.com_in_links.png",
+        "alt": "Links Page Screenshot"
+      },
+      {
+        "title": "Transcription",
+        "icon": "fas fa-home",
+        "imgSrc": "images/subslikescript/img_subslikescript.com_in_page.png",
+        "alt": "Data Page Screenshot"
+      }
+    ],
+    "outputData": [
+      {
+        "title": "CSV",
+        "icon": "fas fa-file-csv",
+        "imgSrc": "images/subslikescript/img_subslikescript.com_out_json.png",
+        "alt": "JSON Output Screenshot"
+      },
+      {
+        "title": "JSON",
+        "icon": "fas fa-file-code",
+        "imgSrc": "images/subslikescript/img_subslikescript.com_out_txt.png",
+        "alt": "TXT Output Screenshot"
+      }
+    ]
+  }
+]
