@@ -82,7 +82,26 @@
                 <div class="copyright">
                     &copy; 2025 Dmytro Nikolaiev. All rights reserved.
                 </div> 
-                <img src="https://visitor-badge.glitch.me/badge?page_id=vialaky.vialaky.github.io" alt="visitor badge"/>
+                <div style="margin: 20px 0; padding: 10px; background: #f0f0f0; border-radius: 5px; display: inline-block;">
+                    👁️ Просмотров: <span id="view-count" style="font-weight: bold; color: #0066cc;">0</span>
+                </div>
+                
+                <script>
+                // Генерируем уникальный ключ для каждой страницы
+                const pageKey = 'views_' + window.location.pathname.replace(/[^a-zA-Z0-9]/g, '_');
+                
+                // Получаем текущее количество просмотров
+                let viewCount = parseInt(localStorage.getItem(pageKey)) || 0;
+                
+                // Увеличиваем счетчик
+                viewCount++;
+                
+                // Сохраняем новое значение
+                localStorage.setItem(pageKey, viewCount);
+                
+                // Отображаем
+                document.getElementById('view-count').textContent = viewCount;
+                </script>            
             </div>
         </div>
     </footer>
