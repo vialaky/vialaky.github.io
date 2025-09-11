@@ -104,14 +104,14 @@
   {
     "category": "Digital Media",
     "title": "Audible.com",
-	"description": "A web scraper to extract metadata from Audible.com. The project collects title, author, and duration for 500 audiobooks across 25 pages, enabling analysis of audiobook catalog characteristics.",    
-	"tools": "<i>Selenium, Pandas</i>",
+    "description": "A solution for extracting and storing movie titles, plot summaries and scripts from a movie database.",
+    "tools": "<i>Selenium, Pandas</i>",
     "inputData": [
       {
         "title": "Audiobooks",
         "icon": "fas fa-link",
         "imgSrc": "data/images/audible/img_audible_in_page1.png",
-        "alt": "Audible search page screenshot"
+        "alt": "Audiobooks Page Screenshot"
       },
       {
         "title": "Audiobook Data",
