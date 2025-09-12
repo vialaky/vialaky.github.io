@@ -38,8 +38,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         <div class="project-category">${project.category}</div>
         <div class="project-content">
           <h3 class="project-title">${project.title}</h3>
-          <p>${project.description}</p>
-          <p>Tools: ${project.tools}</p>
+          <p class="project-content-description">${project.description}</p>
+          <p class="project-content-tools">Tools: ${project.tools}</p>
           <div class="data-section">
             <h4>Input Data</h4>
             <div class="data-container">${inputDataHTML}</div>

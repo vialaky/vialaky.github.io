@@ -158,8 +158,8 @@ section:nth-child(even) {
 .projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-top: 40px;
+  gap: 20px;
+  padding: 20px;
 }
 
 .project-card {
@@ -184,9 +184,30 @@ section:nth-child(even) {
   font-weight: 500;
 }
 
+/* Общие стили для параграфов в .project-content */
 .project-content {
-  padding: 20px;
-  flex-grow: 1;
+  padding: 15px;
+}
+
+.project-content p {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #1a2a57;
+  margin: 10px 0;
+}
+
+/* Стили для описания */
+.project-content-description {
+  height: 9rem; /* ~5 строк при line-height: 1.5 */
+  text-align: justify; /* Выравнивание по ширине */
+  overflow: hidden; /* Скрывает лишний текст */
+}
+
+/* Стили для инструментов */
+.project-content-tools {
+  text-align: left; /* Естественное выравнивание */
+  min-height: auto; /* Без фиксированной высоты */
 }
 
 .project-title {
