@@ -70,7 +70,7 @@
   {
     "category": "Movies",
     "title": "Subslikescript.com",
-    "description": "A solution for extracting and storing movie titles, plot summaries and scripts from a movie database.",
+    "description": "Movie information mining solution. The project collects titles, release year, plot summaries and full script transcripts for all eligible movies, facilitating the analysis of movie content and narrative.",
     "tools": "<i>BeautifulSoup</i>",
     "inputData": [
       {
@@ -104,7 +104,7 @@
   {
     "category": "Digital Media",
     "title": "Audible.com",
-	"description": "A web scraper to extract metadata from Audible.com. The project collects title, author, and duration for 500 audiobooks across 25 pages, enabling analysis of audiobook catalog characteristics.",    
+	"description": "A web scraping solution for extracting audiobook metadata. The project collects data on the title, author, and duration of 500 audiobooks on 25 pages, which allows you to analyze the characteristics of the audiobook catalog.",    
 	"tools": "<i>Selenium, Pandas</i>",
     "inputData": [
       {
