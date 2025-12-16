@@ -199,7 +199,7 @@ section:nth-child(even) {
 
 /* Стили для описания */
 .project-content-description {
-  height: 9rem; /* ~5 строк при line-height: 1.5 */
+  height: 11rem; /* ~7 строк при line-height: 1.5 */
   text-align: justify; /* Выравнивание по ширине */
   overflow: hidden; /* Скрывает лишний текст */
 }

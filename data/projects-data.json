@@ -2,7 +2,7 @@
   {
     "category": "Health & Nutrition",
     "title": "Health-diet.ru",
-    "description": "A web scraper for extracting nutritional data. The project collects data on the calorie content, protein, fat, and carbohydrate content of more than 13,000 food products, allowing for detailed analysis of nutritional value and the selection of diets based on the principles of healthy eating.",
+    "description": "A Python web scraping solution extracting comprehensive nutritional data from 13,000+ food products. Collects detailed metrics including calories, protein, fat, and carbohydrate content, enabling in-depth nutritional analysis and facilitating evidence-based diet planning aligned with healthy eating principles.",
     "tools": "<i>BeautifulSoup, Pandas</i>",
     "inputData": [
       {
@@ -36,7 +36,7 @@
   {
     "category": "Sports",
     "title": "Soccerwiki.org",
-    "description": "A solution for collecting information about soccer teams and players. The project collects data on the team name, year of foundation, city, stadium name, and manager name for all 20 teams in the English Premier League, allowing for analysis of the league structure. Information is also collected on 900+ Premier League players, and the number of players of different nationalities is counted.",
+    "description": "A web scraping solution that extracts data on all 20 English Premier League teams (name, year founded, city, stadium, and coach) and more than 900 players, broken down by nationality. It allows for detailed analysis of the league structure and demographic data of players in the top division of English football.",
     "tools": "<i>BeautifulSoup</i>",
     "inputData": [
       {
@@ -70,7 +70,7 @@
   {
     "category": "Movies",
     "title": "Subslikescript.com",
-    "description": "A web scraper for extracting movie data. The project collects titles, years, summaries, and script transcriptions for numerous movies, allowing for the analysis of cinematic content and narrative features.",
+    "description": "A web scraping solution designed to extract summary information about films, including titles, release years, and plot summaries. The scraper processes multiple films, enabling analysis of cinematic content, narrative structures, storytelling patterns, and genre characteristics.",
     "tools": "<i>BeautifulSoup</i>",
     "inputData": [
       {
@@ -104,7 +104,7 @@
   {
     "category": "Digital Media",
     "title": "Audible.com",
-	"description": "A web scraping solution for extracting audiobook metadata. The project collects data on the title, author, and duration of 500 audiobooks on 25 pages, which allows you to analyze the characteristics of the audiobook catalog.",    
+	"description": "A Python-based web scraping solution designed to extract audiobook metadata from Audible's catalog. The scraper collects key data points including titles, authors, and duration information across 500+ audiobooks spanning 25 pages, enabling detailed analysis of catalog characteristics and trends.",    
 	"tools": "<i>Selenium, Pandas</i>",
     "inputData": [
       {
