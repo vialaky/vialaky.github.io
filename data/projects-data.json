@@ -60,7 +60,7 @@
         "alt": "Team Data JSON"
       },
       {
-        "title": "Players Nationalities",
+        "title": "Nationalities",
         "icon": "fas fa-file-code",
         "imgSrc": "data/images/soccerwiki/img_soccerwiki.org_out_nations.png",
         "alt": "Players Nationalities JSON"
