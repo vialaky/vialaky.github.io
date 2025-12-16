@@ -36,7 +36,7 @@
   {
     "category": "Sports",
     "title": "Soccerwiki.org",
-    "description": "A solution for collecting information about soccer teams. The project collects data on the team name, year of foundation, city, stadium name, and manager name for all 20 teams in the English Premier League, allowing for analysis of the league structure.",
+    "description": "A solution for collecting information about soccer teams and players.\n The project collects data on the team name, year of foundation, city, stadium name, and manager name for all 20 teams in the English Premier League, allowing for analysis of the league structure.\n",
     "tools": "<i>BeautifulSoup</i>",
     "inputData": [
       {
@@ -56,14 +56,14 @@
       {
         "title": "JSON",
         "icon": "fas fa-file-code",
-        "imgSrc": "data/images/soccerwiki/img_soccerwiki.org_out_json.png",
-        "alt": "JSON File Screenshot"
+        "imgSrc": "data/images/soccerwiki/img_soccerwiki.org_out_teamdata.png",
+        "alt": "Team Data JSON"
       },
       {
         "title": "JSON",
         "icon": "fas fa-file-code",
-        "imgSrc": "data/images/soccerwiki/img_soccerwiki.org_out_json2.png",
-        "alt": "JSON File Screenshot"
+        "imgSrc": "data/images/soccerwiki/img_soccerwiki.org_out_nations.png",
+        "alt": "Players Nationalities JSON"
       }
     ]
   },
