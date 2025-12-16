@@ -215,6 +215,17 @@ section:nth-child(even) {
   color: #1a2a57;
 }
 
+.project-title a {
+  color: #1a2a57;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.project-title a:hover {
+  color: #263b80;
+  text-decoration: underline;
+}
+
 .screenshot {
   width: 100%;
   border-radius: 4px;

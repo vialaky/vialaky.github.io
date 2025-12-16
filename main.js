@@ -37,7 +37,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       <div class="project-card">
         <div class="project-category">${project.category}</div>
         <div class="project-content">
-          <h3 class="project-title">${project.title}</h3>
+          <h3 class="project-title"> 
+            ${project.url ? `<a href="${project.url}" target="_blank" rel="noopener noreferrer">${project.title}</a>` : project.title}
+          </h3>
           <p class="project-content-description">${project.description}</p>
           <p class="project-content-tools">Tools: ${project.tools}</p>
           <div class="data-section">
