@@ -2,7 +2,8 @@
   {
     "category": "Health & Nutrition",
     "title": "Health-diet.ru",
-    "description": "A web scraper for extracting nutritional data. The project collects data on the calorie content, protein, fat, and carbohydrate content of more than 13,000 food products, allowing for detailed analysis of nutritional value and the selection of diets based on the principles of healthy eating.",
+    "url": "https://health-diet.ru/table_calorie/?utm_source=leftMenu&utm_medium=table_calorie",
+    "description": "A Python web scraping solution extracting comprehensive nutritional data from 13,000+ food products. Collects detailed metrics including calories, protein, fat, and carbohydrate content, enabling in-depth nutritional analysis and facilitating evidence-based diet planning aligned with healthy eating principles.",
     "tools": "<i>BeautifulSoup, Pandas</i>",
     "inputData": [
       {
@@ -33,10 +34,12 @@
       }
     ]
   },
+
   {
     "category": "Sports",
     "title": "Soccerwiki.org",
-    "description": "A solution for collecting information about soccer teams. The project collects data on the team name, year of foundation, city, stadium name, and manager name for all 20 teams in the English Premier League, allowing for analysis of the league structure.",
+    "url": "https://en.soccerwiki.org/league.php?leagueid=28",
+    "description": "A web scraping solution that extracts data on all 20 English Premier League teams (name, year founded, city, stadium, and coach) and more than 900 players, broken down by nationality. It allows for detailed analysis of the league structure and demographic data of players in the top division of English football.",
     "tools": "<i>BeautifulSoup</i>",
     "inputData": [
       {
@@ -54,23 +57,25 @@
     ],
     "outputData": [
       {
-        "title": "JSON",
+        "title": "Team Data JSON",
         "icon": "fas fa-file-code",
-        "imgSrc": "data/images/soccerwiki/img_soccerwiki.org_out_json.png",
-        "alt": "JSON File Screenshot"
+        "imgSrc": "data/images/soccerwiki/img_soccerwiki.org_out_teamdata.png",
+        "alt": "Team Data JSON"
       },
       {
-        "title": "JSON",
+        "title": "Nationalities",
         "icon": "fas fa-file-code",
-        "imgSrc": "data/images/soccerwiki/img_soccerwiki.org_out_json2.png",
-        "alt": "JSON File Screenshot"
+        "imgSrc": "data/images/soccerwiki/img_soccerwiki.org_out_nations.png",
+        "alt": "Players Nationalities JSON"
       }
     ]
   },
+
   {
     "category": "Movies",
     "title": "Subslikescript.com",
-    "description": "Movie information mining solution. The project collects titles, release year, plot summaries and full script transcripts for all eligible movies, facilitating the analysis of movie content and narrative.",
+    "url": "https://subslikescript.com/movies",
+    "description": "A web scraping solution designed to extract summary information about films, including titles, release years, and plot summaries. The scraper processes multiple films, enabling analysis of cinematic content, narrative structures, storytelling patterns, and genre characteristics.",
     "tools": "<i>BeautifulSoup</i>",
     "inputData": [
       {
@@ -101,10 +106,12 @@
       }
     ]
   },
+
   {
-    "category": "Digital Media",
-    "title": "Audible.com",
-	"description": "A web scraping solution for extracting audiobook metadata. The project collects data on the title, author, and duration of 500 audiobooks on 25 pages, which allows you to analyze the characteristics of the audiobook catalog.",    
+  "category": "Digital Media",
+  "title": "Audible.com",
+  "url": "https://www.audible.com/search",
+	"description": "A Python-based web scraping solution designed to extract audiobook metadata from Audible's catalog. The scraper collects key data points including titles, authors, and duration information across 500+ audiobooks spanning 25 pages, enabling detailed analysis of catalog characteristics and trends.",    
 	"tools": "<i>Selenium, Pandas</i>",
     "inputData": [
       {
@@ -131,6 +138,42 @@
         "title": "JSON",
         "icon": "fas fa-file-code",
         "imgSrc": "data/images/audible/img_audible_out_json.png",
+        "alt": "JSON File Screenshot"
+      }
+    ]
+  },
+  
+  {
+  "category": "Sports",
+  "title": "Transfermarkt.com",
+  "url": "https://www.transfermarkt.com/uefa-champions-league/torschuetzenliste/pokalwettbewerb/CL/saison_id/2025",
+	"description": "This script automatically collects the list of the current season's top goalscorers in the UEFA Champions League from the Transfermarkt website. Using Selenium, it crawls all pages of the table, extracting data on players, clubs, and goals, and then saves the results in CSV and JSON formats for further analysis.",    
+	"tools": "<i>Selenium, Pandas</i>",
+    "inputData": [
+      {
+        "title": "Scorers Page 1",
+        "icon": "fas fa-link",
+        "imgSrc": "data/images/transfermarkt/img_transfermarkt_in_page1.png",
+        "alt": "UEFA Champions League Top Goalscorers Page 1"
+      },
+      {
+        "title": "Scorers Page 7",
+        "icon": "fas fa-home",
+        "imgSrc": "data/images/transfermarkt/img_transfermarkt_in_page7.png",
+        "alt": "UEFA Champions League Top Goalscorers Page 7"
+      }
+    ],
+    "outputData": [
+      {
+        "title": "CSV",
+        "icon": "fas fa-file-csv",
+        "imgSrc": "data/images/transfermarkt/img_transfermarkt_out_csv.png",
+        "alt": "CSV File Screenshot"
+      },
+      {
+        "title": "JSON",
+        "icon": "fas fa-file-code",
+        "imgSrc": "data/images/transfermarkt/img_transfermarkt_out_json.png",
         "alt": "JSON File Screenshot"
       }
     ]

@@ -141,6 +141,42 @@
         "alt": "JSON File Screenshot"
       }
     ]
+  },
+  
+  {
+  "category": "Sports",
+  "title": "Transfermarkt.com",
+  "url": "https://www.transfermarkt.com/uefa-champions-league/torschuetzenliste/pokalwettbewerb/CL/saison_id/2025",
+	"description": "This script automatically collects the list of the current season's top goalscorers in the UEFA Champions League from the Transfermarkt website. Using Selenium, it crawls all pages of the table, extracting data on players, clubs, and goals, and then saves the results in CSV and JSON formats for further analysis.",    
+	"tools": "<i>Selenium, Pandas</i>",
+    "inputData": [
+      {
+        "title": "Scorers (page 1)",
+        "icon": "fas fa-link",
+        "imgSrc": "data/images/transfermarkt/img_transfermarkt_in_page1.png",
+        "alt": "UEFA Champions League Top Goalscorers Page 1"
+      },
+      {
+        "title": "Scorers (page 7)",
+        "icon": "fas fa-home",
+        "imgSrc": "data/images/transfermarkt/img_transfermarkt_in_page7.png",
+        "alt": "UEFA Champions League Top Goalscorers Page 7"
+      }
+    ],
+    "outputData": [
+      {
+        "title": "CSV",
+        "icon": "fas fa-file-csv",
+        "imgSrc": "data/images/transfermarkt/img_transfermarkt_out_csv.png",
+        "alt": "CSV File Screenshot"
+      },
+      {
+        "title": "JSON",
+        "icon": "fas fa-file-code",
+        "imgSrc": "data/images/transfermarkt/img_transfermarkt_out_json.png",
+        "alt": "JSON File Screenshot"
+      }
+    ]
   }
 ]
 
