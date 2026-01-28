@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const projectsContainer = document.querySelector('.projects');
   if (!projectsContainer) return;
 
-  const NUM_DISPLAY = 3; // Сейчас 3 карточки; измените на 6, 9 или 12 по мере роста коллекции
+  const NUM_DISPLAY = 6; // Сейчас 3 карточки; измените на 6, 9 или 12 по мере роста коллекции
 
   // Функция для перемешивания массива (Fisher-Yates)
   function shuffleArray(array) {
