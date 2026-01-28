@@ -177,7 +177,42 @@
         "alt": "JSON File Screenshot"
       }
     ]
-  }
+  },
+  {
+  "category": "Real Estate",
+  "title": "Наш.дом.рф",
+  "url": "https://xn--80az8a.xn--d1aqf.xn--p1ai/%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D1%8B/%D0%B5%D0%B4%D0%B8%D0%BD%D1%8B%D0%B9-%D1%80%D0%B5%D0%B5%D1%81%D1%82%D1%80-%D0%B7%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%89%D0%B8%D0%BA%D0%BE%D0%B2",
+  "description": "A data extraction solution that enables structured information retrieval from the Unified Register of Developers. Detailed data on developers and construction projects is collected, including names, regions, addresses, contact information, management and ownership details, and project statuses. This dataset enables market analysis, developer activity tracking, and the creation of custom analytical reports.",
+  "tools": "<i>Requests, Pandas</i>",
+  "inputData": [
+    {
+      "title": "Developers List",
+      "icon": "fas fa-link",
+      "imgSrc": "data/images/nashdom/img_nashdom_in_reestr.png",
+      "alt": "Register of developers Screenshot"
+    },
+    {
+      "title": "Developer's Page",
+      "icon": "fas fa-code",
+      "imgSrc": "data/images/nashdom/img_nashdom_in_itempage.png",
+      "alt": "Developer's Page Screenshot"
+    }
+  ],
+  "outputData": [
+    {
+      "title": "CSV",
+      "icon": "fas fa-file-csv",
+      "imgSrc": "data/images/nashdom/img_nashdom_out_csv.png",
+      "alt": "CSV File Screenshot"
+    },
+    {
+      "title": "JSON",
+      "icon": "fas fa-file-code",
+      "imgSrc": "data/images/nashdom/img_nashdom_out_json.png",
+      "alt": "JSON File Screenshot"
+    }
+  ]
+}
 ]
 
 
