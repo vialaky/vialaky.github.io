@@ -1,5 +1,5 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: #333;
   margin: 0;
@@ -90,7 +90,7 @@ h2 {
 }
 
 h2:after {
-  content: '';
+  content: "";
   display: block;
   width: 60px;
   height: 3px;
@@ -167,7 +167,9 @@ section:nth-child(even) {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
   display: flex;
   flex-direction: column;
 }
@@ -190,7 +192,7 @@ section:nth-child(even) {
 }
 
 .project-content p {
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   color: #1a2a57;
@@ -199,9 +201,11 @@ section:nth-child(even) {
 
 /* Стили для описания */
 .project-content-description {
-  height: 11rem; /* ~7 строк при line-height: 1.5 */
-  text-align: justify; /* Выравнивание по ширине */
-  overflow: hidden; /* Скрывает лишний текст */
+  display: -webkit-box;
+  -webkit-line-clamp: 10; /* підбереш число під свою верстку */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: justify;
 }
 
 /* Стили для инструментов */

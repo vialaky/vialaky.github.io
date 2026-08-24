@@ -217,7 +217,7 @@
     "category": "Real Estate",
     "title": "Otodom.pl",
     "url": "https://www.otodom.pl/pl/wyniki/sprzedaz/mieszkanie/pomorskie/sopot/sopot/sopot?limit=72",
-    "description": "A Python-based solution for automated data collection from the Polish real estate portal Otodom.pl. The parser extracts structured information about real estate objects, including object description, location, area, price, price per square meter, floor, and saves the obtained data to the database.",
+    "description": "An automated pipeline collecting apartment listings from Otodom.pl, Poland's major real estate portal. Built with Playwright to handle dynamic content, the scraper auto-detects the total number of result pages and distinguishes single listings from multi-unit developments using dedicated parsing logic. Retry logic with exponential backoff ensures reliability, while results are stored in PostgreSQL with upsert logic to avoid duplicates on repeated runs.",
     "tools": "<i>Playwright, PostgreSQL</i>",
     "inputData": [
       {
