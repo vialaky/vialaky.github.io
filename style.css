@@ -189,6 +189,9 @@ section:nth-child(even) {
 /* Общие стили для параграфов в .project-content */
 .project-content {
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .project-content p {
@@ -201,11 +204,8 @@ section:nth-child(even) {
 
 /* Стили для описания */
 .project-content-description {
-  display: -webkit-box;
-  -webkit-line-clamp: 10; /* підбереш число під свою верстку */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
   text-align: justify;
+  flex-grow: 1; /* растягивает описание */
 }
 
 /* Стили для инструментов */
