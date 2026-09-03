@@ -111,7 +111,7 @@
     "category": "Digital Media",
     "title": "Audible.com",
     "url": "https://www.audible.com/search",
-    "description": "A Python-based web scraping solution designed to extract audiobook metadata from Audible's catalog. The scraper collects key data points including titles, authors, and duration information across 500+ audiobooks spanning 25 pages, enabling detailed analysis of catalog characteristics and trends.",
+    "description": "Automated collection of audiobook metadata from Audible's search catalog — title, author, and duration for 500 listings across 25 result pages, out of a full catalog exceeding 60,000 titles. Built with Selenium to handle the site's dynamically rendered content, the scraper auto-detects the total number of pages from the pagination bar rather than relying on a fixed range, and correctly handles entries with multiple listed authors or editors. Results are exported to CSV and JSON.",
     "tools": "<i>Selenium, Pandas</i>",
     "inputData": [
       {
