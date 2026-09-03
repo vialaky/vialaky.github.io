@@ -147,7 +147,7 @@
     "category": "Sports",
     "title": "Transfermarkt.com",
     "url": "https://www.transfermarkt.com/uefa-champions-league/torschuetzenliste/pokalwettbewerb/CL/saison_id/2025",
-    "description": "This script automatically collects the list of the current season's top goalscorers in the UEFA Champions League from the Transfermarkt website. Using Selenium, it crawls all pages of the table, extracting data on players, clubs, and goals, and then saves the results in CSV and JSON formats for further analysis.",
+    "description": "Automated collection of UEFA Champions League top goalscorer statistics via Transfermarkt's internal data endpoint, extracting player name, position, nationality, age, club, and goals for each entry. The scraper detects the total number of pages automatically and queries the site's AJAX pagination endpoint directly rather than emulating browser clicks, keeping the process lightweight and fast. Multi-nationality players (multiple flags per row) are handled correctly. Results are exported to CSV and JSON.",
     "tools": "<i>BeautifulSoup, Pandas</i>",
     "inputData": [
       {
