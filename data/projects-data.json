@@ -252,7 +252,7 @@
     "category": "Home Improvement Retail",
     "title": "Leroymerlin.co.za",
     "url": "https://leroymerlin.co.za/garden-landscaping",
-    "description": "A reusable, config-driven scraping framework rather than a single-site script — new sites are added through configuration alone. Applied to Leroy Merlin South Africa's garden & landscaping catalog, it handles a dynamic, Algolia-powered product grid across 22 categories with atomic, resumable progress per category. Delivered 12,600+ unique products across 716 pages, exported to JSON and CSV.",
+    "description": "A reusable, config-driven scraping framework rather than a single-site script — new sites are added through configuration alone. Applied to Leroy Merlin South Africa's garden & landscaping catalog, it handles a dynamic, Algolia-powered product grid across 22 categories with atomic, resumable progress per category. Delivered 12,600+ unique products across 700+ pages, exported to JSON and CSV.",
     "tools": "<i>Playwright</i>",
     "inputData": [
       {
