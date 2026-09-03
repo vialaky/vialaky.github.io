@@ -3,7 +3,7 @@
     "category": "Health & Nutrition",
     "title": "Health-diet.ru",
     "url": "https://health-diet.ru/table_calorie/?utm_source=leftMenu&utm_medium=table_calorie",
-    "description": "A Python web scraping solution extracting comprehensive nutritional data from 13,000+ food products. Collects detailed metrics including calories, protein, fat, and carbohydrate content, enabling in-depth nutritional analysis and facilitating evidence-based diet planning aligned with healthy eating principles.",
+    "description": "A complete nutritional database built from 13,000+ food products across every category on the site – calories, protein, fat, and carbohydrates for each item. The scraper handles the full catalog reliably: it detects and skips empty categories automatically, and uses rate-limited requests to avoid overloading the source site. Results are structured and exported to JSON.",
     "tools": "<i>BeautifulSoup, Pandas</i>",
     "inputData": [
       {
@@ -39,7 +39,7 @@
     "category": "Sports",
     "title": "Soccerwiki.org",
     "url": "https://en.soccerwiki.org/league.php?leagueid=28",
-    "description": "A web scraping solution that extracts data on all 20 English Premier League teams (name, year founded, city, stadium, and coach) and more than 900 players, broken down by nationality. It allows for detailed analysis of the league structure and demographic data of players in the top division of English football.",
+    "description": "A two-stage scraper covering all 20 English Premier League clubs and their full squads. It first collects team links from the league page, then visits each club page to extract details (founding year, stadium, manager) by parsing labeled text fields with fallback handling for inconsistent formatting. Player nationalities are aggregated across all clubs into a sorted frequency count – covering 900+ players from over 70 countries – and exported to structured JSON.",
     "tools": "<i>BeautifulSoup</i>",
     "inputData": [
       {
@@ -217,7 +217,7 @@
     "category": "Real Estate",
     "title": "Otodom.pl",
     "url": "https://www.otodom.pl/pl/wyniki/sprzedaz/mieszkanie/pomorskie/sopot/sopot/sopot?limit=72",
-    "description": "A Python-based solution for automated data collection from the Polish real estate portal Otodom.pl. The parser extracts structured information about real estate objects, including object description, location, area, price, price per square meter, floor, and saves the obtained data to the database.",
+    "description": "An automated pipeline collecting apartment listings from Otodom.pl, Poland's major real estate portal. Built with Playwright to handle dynamic content, the scraper auto-detects the total number of result pages and distinguishes single listings from multi-unit developments using dedicated parsing logic. Retry logic with exponential backoff ensures reliability, while results are stored in PostgreSQL with upsert logic to avoid duplicates on repeated runs.",
     "tools": "<i>Playwright, PostgreSQL</i>",
     "inputData": [
       {
@@ -244,6 +244,41 @@
         "title": "JSON",
         "icon": "fas fa-file-code",
         "imgSrc": "data/images/otodom/img_otodom_out_json.png",
+        "alt": "JSON File Screenshot"
+      }
+    ]
+  },
+  {
+    "category": "Home Improvement Retail",
+    "title": "Leroymerlin.co.za",
+    "url": "https://leroymerlin.co.za/garden-landscaping",
+    "description": "A reusable, config-driven scraping framework rather than a single-site script — new sites are added through configuration alone. Applied to Leroy Merlin South Africa's garden & landscaping catalog, it handles a dynamic, Algolia-powered product grid across 22 categories with atomic, resumable progress per category. Delivered 12,600+ unique products across 716 pages, exported to JSON and CSV.",
+    "tools": "<i>Playwright</i>",
+    "inputData": [
+      {
+        "title": "Categories List",
+        "icon": "fas fa-link",
+        "imgSrc": "data/images/leroymerlin/img_leroymerlin_in_startpage.png",
+        "alt": "Garden & Landscaping Categories"
+      },
+      {
+        "title": "Category Page",
+        "icon": "fas fa-home",
+        "imgSrc": "data/images/leroymerlin/img_leroymerlin_in_itemspage.png",
+        "alt": "Leroymerlin category page screenshot"
+      }
+    ],
+    "outputData": [
+      {
+        "title": "CSV",
+        "icon": "fas fa-file-csv",
+        "imgSrc": "data/images/leroymerlin/img_leroymerlin_out_csv.png",
+        "alt": "CSV File Screenshot"
+      },
+      {
+        "title": "JSON",
+        "icon": "fas fa-file-code",
+        "imgSrc": "data/images/leroymerlin/img_leroymerlin_out_json.png",
         "alt": "JSON File Screenshot"
       }
     ]
