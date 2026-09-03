@@ -94,13 +94,13 @@
     "outputData": [
       {
         "title": "JSON",
-        "icon": "fas fa-file-csv",
+        "icon": "fas fa-file-code",
         "imgSrc": "data/images/subslikescript/img_subslikescript.com_out_json.png",
         "alt": "JSON File Screenshot"
       },
       {
         "title": "TXT",
-        "icon": "fas fa-file-code",
+        "icon": "fas fa-file-lines",
         "imgSrc": "data/images/subslikescript/img_subslikescript.com_out_txt.png",
         "alt": "TXT File Screenshot"
       }
