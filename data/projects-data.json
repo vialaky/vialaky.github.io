@@ -75,8 +75,8 @@
     "category": "Movies",
     "title": "Subslikescript.com",
     "url": "https://subslikescript.com/movies",
-    "description": "A web scraping solution designed to extract summary information about films, including titles, release years, and plot summaries. The scraper processes multiple films, enabling analysis of cinematic content, narrative structures, storytelling patterns, and genre characteristics.",
-    "tools": "<i>BeautifulSoup</i>",
+    "description": "Automated collection of movie metadata and plot summaries, built on the same reusable scraping framework used for Leroy Merlin. Configured with static letter categories (A\u2013E) and a two-tab custom parser \u2014 one tab holds the paginated listing, a second opens each movie's detail page to extract its full plot, keeping listing state intact throughout. Successfully passed an automated JavaScript challenge the site added mid-project, without any manual intervention. Delivered 15,600+ unique films across 525 pages, exported to JSON and CSV per letter.",
+    "tools": "<i>Playwright, BeautifulSoup</i>",
     "inputData": [
       {
         "title": "Movies List Page",
@@ -99,10 +99,10 @@
         "alt": "JSON File Screenshot"
       },
       {
-        "title": "TXT",
-        "icon": "fas fa-file-lines",
-        "imgSrc": "data/images/subslikescript/img_subslikescript.com_out_txt.png",
-        "alt": "TXT File Screenshot"
+        "title": "CSV",
+        "icon": "fas fa-file-csv",
+        "imgSrc": "data/images/subslikescript/img_subslikescript.com_out_csv.png",
+        "alt": "CSV File Screenshot"
       }
     ]
   },
@@ -111,7 +111,7 @@
     "category": "Digital Media",
     "title": "Audible.com",
     "url": "https://www.audible.com/search",
-    "description": "Automated collection of audiobook metadata from Audible's search catalog — title, author, and duration for 500 listings across 25 result pages, out of a full catalog exceeding 60,000 titles. Built with Selenium to handle the site's dynamically rendered content, the scraper auto-detects the total number of pages from the pagination bar rather than relying on a fixed range, and correctly handles entries with multiple listed authors or editors. Results are exported to CSV and JSON.",
+    "description": "Automated collection of audiobook metadata from Audible's search catalog \u2014 title, author, and duration for 500 listings across 25 result pages, out of a full catalog exceeding 60,000 titles. Built with Selenium to handle the site's dynamically rendered content, the scraper auto-detects the total number of pages from the pagination bar rather than relying on a fixed range, and correctly handles entries with multiple listed authors or editors. Results are exported to CSV and JSON.",
     "tools": "<i>Selenium, Pandas</i>",
     "inputData": [
       {
@@ -217,7 +217,7 @@
     "category": "Home Improvement Retail",
     "title": "Leroymerlin.co.za",
     "url": "https://leroymerlin.co.za/garden-landscaping",
-    "description": "A reusable, config-driven scraping framework rather than a single-site script — new sites are added through configuration alone. Applied to Leroy Merlin South Africa's garden & landscaping catalog, it handles a dynamic, Algolia-powered product grid across 22 categories with atomic, resumable progress per category. Delivered 12,600+ unique products across 700+ pages, exported to JSON and CSV.",
+    "description": "A reusable, config-driven scraping framework rather than a single-site script \u2014 new sites are added through configuration alone. Applied to Leroy Merlin South Africa's garden & landscaping catalog, it handles a dynamic, Algolia-powered product grid across 22 categories with atomic, resumable progress per category. Delivered 12,600+ unique products across 700+ pages, exported to JSON and CSV.",
     "tools": "<i>Playwright</i>",
     "inputData": [
       {

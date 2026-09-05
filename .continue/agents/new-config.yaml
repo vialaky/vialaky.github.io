@@ -1,0 +1,17 @@
+name: Gemma 4 Cloud Config
+version: 1.0.0
+schema: v1
+
+models:
+  - name: google/gemma-4-31b:free
+    roles:
+      - chat
+      - edit
+
+providers:
+  - name: openrouter
+    type: openai
+    apiBase: https://openrouter.ai
+    apiKey: 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
+    models:
+      - google/gemma-4-31b:free
