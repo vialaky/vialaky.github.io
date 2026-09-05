@@ -75,7 +75,7 @@
     "category": "Movies",
     "title": "Subslikescript.com",
     "url": "https://subslikescript.com/movies",
-    "description": "Automated collection of movie metadata and plot summaries, built on the same reusable scraping framework used for Leroy Merlin. Configured with static letter categories (A\u2013E) and a two-tab custom parser \u2014 one tab holds the paginated listing, a second opens each movie's detail page to extract its full plot, keeping listing state intact throughout. Successfully passed an automated JavaScript challenge the site added mid-project, without any manual intervention. Delivered 15,600+ unique films across 525 pages, exported to JSON and CSV per letter.",
+    "description": "Automated collection of movie metadata and plot summaries, built on the same reusable scraping framework used for Leroy Merlin. Configured with static letter categories (A\u2013E) and a two-tab custom parser \u2014 one tab holds the paginated listing, a second opens each movie's detail page to extract its full plot, keeping listing state intact throughout. Successfully passed an automated JavaScript challenge the site added mid-project, without any manual intervention. Delivered 15,600+ unique films across 500+ pages, exported to JSON and CSV per letter.",
     "tools": "<i>Playwright, BeautifulSoup</i>",
     "inputData": [
       {
